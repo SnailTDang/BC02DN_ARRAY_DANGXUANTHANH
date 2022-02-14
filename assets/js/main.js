@@ -200,11 +200,12 @@ const indexNum1 = document.querySelector(".index-number1");
 const indexNum2 = document.querySelector(".index-number2");
 
 function convertNumber(array, index1, index2) {
-  for (let arr of array) {
+  if (array.length) {
     let temp = array[index1];
     array[index1] = array[index2];
     array[index2] = temp;
   }
+
   convertNum.innerText = "Mảng sau khi đổi:  " + "[" + array.join(", ") + "]";
 }
 

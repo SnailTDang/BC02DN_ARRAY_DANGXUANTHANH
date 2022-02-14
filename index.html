@@ -29,22 +29,6 @@
   <body>
     <div class="wrapper">
       <div class="container">
-        <div class="array">
-          <form class="array-input" action="#">
-            <input
-              type="number"
-              id="input-array"
-              step="1"
-              placeholder="Nhập số n"
-            />
-            <button class="array-push">Thêm số</button>
-            <button class="number-delete">Xóa phần tử cuối</button>
-            <button class="array-delete">Xóa mảng</button>
-            <div class="result-output array-result">
-              <span id="array-print">"Nhập các phần tử của mảng ở trên"</span>
-            </div>
-          </form>
-        </div>
         <div class="excersise-form">
           <div class="meunu-exercises">
             <div class="meunu-box">
@@ -63,6 +47,24 @@
             </div>
           </div>
           <div id="exercises-box">
+            <div class="array">
+              <form class="array-input" action="#">
+                <input
+                  type="number"
+                  id="input-array"
+                  step="1"
+                  placeholder="Nhập số n"
+                />
+                <button class="array-push">Thêm số</button>
+                <button class="number-delete">Xóa phần tử cuối</button>
+                <button class="array-delete">Xóa mảng</button>
+                <div class="result-output array-result">
+                  <span id="array-print"
+                    >"Nhập các phần tử của mảng ở trên"</span
+                  >
+                </div>
+              </form>
+            </div>
             <div class="exercises-content part1 open">
               <div class="exercises-heading">
                 <h2 class="header">Tổng số dương</h2>
@@ -104,21 +106,7 @@
                     <h4 class="summary-title">Mở rộng để xem thêm</h4>
                     <ul class="summary-list">
                       <li>
-                        <p>
-                          Sử dụng event onchange của dropdown để xử lý ẩn hiện
-                          cho ô nhập số kết nối khi chọn loại khách hàng:
-                          Onchange
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Đối với loại khách hàng Doanh Nghiệp, tổng 10 kết nối
-                          đầu là 75$ => đây là giá trọn gói, nếu doanh nghiệp
-                          lắp đặt số kết nối nhỏ hơn 10 thì vẫn phải đóng 75$.
-                          Vd: 6 kết nối thì vẫn sẽ cộng 75$ vào tổng tiền. =>
-                          Nếu lắp trên 10 kết nối thì kết nối thứ 11 trở đi sẽ
-                          tính 5$/kết nối.
-                        </p>
+                        <p>Tương tự demo trên Lớp</p>
                       </li>
                     </ul>
                   </div>
@@ -150,11 +138,7 @@
                     <h4 class="summary-title">Mở rộng để xem thêm</h4>
                     <ul class="summary-list">
                       <li>
-                        <p>
-                          Tổng thu nhập năm các bạn tự nhập thêm. Giả sử 1 tháng
-                          thu nhập 10tr thì 1 năm sẽ là 10 x 12 = 120tr => các
-                          bạn sẽ nhập 120000000
-                        </p>
+                        <p>Tương tự demo trên Lớp</p>
                       </li>
                     </ul>
                   </div>
@@ -186,9 +170,19 @@
                     <h4 class="summary-title">Mở rộng để xem thêm</h4>
                     <ul class="summary-list">
                       <li>
+                        <p>Tạo thêm 1 mảng mới dùng để chứa các số dương</p>
+                      </li>
+                      <li>
                         <p>
-                          Cách tính tiền điện gần giống với bài tính tiền Grab
-                          trên lớp
+                          Dùng vòng lặp để lấy các số dương từ mảng cũ và lưu
+                          vào trong mảng mới Kiểm tra mảng mới có phần tử hay
+                          không.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Nếu có thì bắt đầu đi tìm giá trị dương nhỏ nhất.
+                          Ngược lại thì thông báo không có số dương
                         </p>
                       </li>
                     </ul>
@@ -222,8 +216,9 @@
                     <ul class="summary-list">
                       <li>
                         <p>
-                          Cách tính tiền điện gần giống với bài tính tiền Grab
-                          trên lớp
+                          Tạo 1 biến chứa số chẵn cuối cùng Dùng vòng lặp duyệt
+                          mảng và kiểm tra số chẵn. Nếu là số chẵn thì gán vào
+                          biến.
                         </p>
                       </li>
                     </ul>
@@ -256,10 +251,28 @@
                     <h4 class="summary-title">Mở rộng để xem thêm</h4>
                     <ul class="summary-list">
                       <li>
+                        <p>Vị trí là index của phần tử trong mảng.</p>
+                      </li>
+                      <li>
                         <p>
-                          Cách tính tiền điện gần giống với bài tính tiền Grab
-                          trên lớp
+                          Để gán giá trị vào 1 vị trí(index) trong mảng =>
+                          array[index] = giá trị;
                         </p>
+                      </li>
+                      <li>
+                        <p>
+                          Tạo 1 biến tạm, gán giá trị của phần tử ở vị trí 1 vào
+                          biến tạm
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Gán giá trị của phần tử ở vị trí 2 vào vị trí 1 Gán
+                          giá trị biến tạm vào vị trí 2
+                        </p>
+                      </li>
+                      <li>
+                        <p>Gán giá trị biến tạm vào vị trí 2</p>
                       </li>
                     </ul>
                   </div>
@@ -307,10 +320,7 @@
                     <h4 class="summary-title">Mở rộng để xem thêm</h4>
                     <ul class="summary-list">
                       <li>
-                        <p>
-                          Cách tính tiền điện gần giống với bài tính tiền Grab
-                          trên lớp
-                        </p>
+                        <p>Làm tương tự demo Sinh Vien đã học trên lớp</p>
                       </li>
                     </ul>
                   </div>
@@ -343,8 +353,9 @@
                     <ul class="summary-list">
                       <li>
                         <p>
-                          Cách tính tiền điện gần giống với bài tính tiền Grab
-                          trên lớp
+                          Khi tìm thấy số nguyên tố đầu tiên thì dùng lệnh dừng
+                          vòng lặp (break) để không duyệt những số tiếp theo
+                          trong mảng
                         </p>
                       </li>
                     </ul>
@@ -391,10 +402,7 @@
                     <h4 class="summary-title">Mở rộng để xem thêm</h4>
                     <ul class="summary-list">
                       <li>
-                        <p>
-                          Cách tính tiền điện gần giống với bài tính tiền Grab
-                          trên lớp
-                        </p>
+                        <p>Sử dụng Number.isInteger để kiểm tra số nguyên</p>
                       </li>
                     </ul>
                   </div>
@@ -427,8 +435,8 @@
                     <ul class="summary-list">
                       <li>
                         <p>
-                          Cách tính tiền điện gần giống với bài tính tiền Grab
-                          trên lớp
+                          Đếm số lượng sô âm và số dương. Sau đó so sánh số
+                          lượng của 2 loại
                         </p>
                       </li>
                     </ul>
