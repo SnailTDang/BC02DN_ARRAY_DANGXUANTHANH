@@ -29,293 +29,428 @@
   <body>
     <div class="wrapper">
       <div class="container">
-        <div class="meunu-exercises">
-          <div class="meunu-box">
-            <ul class="list-exercieses">
-              <li class="exercise active"><span>Bài 1</span></li>
-              <li class="exercise"><span>Bài 2</span></li>
-              <li class="exercise"><span>Bài 3</span></li>
-              <li class="exercise"><span>Bài 4</span></li>
-            </ul>
-          </div>
+        <div class="array">
+          <form class="array-input" action="#">
+            <input
+              type="number"
+              id="input-array"
+              step="1"
+              placeholder="Nhập số n"
+            />
+            <button class="array-push">Thêm số</button>
+            <button class="number-delete">Xóa phần tử cuối</button>
+            <button class="array-delete">Xóa mảng</button>
+            <div class="result-output array-result">
+              <span id="array-print">"Nhập các phần tử của mảng ở trên"</span>
+            </div>
+          </form>
         </div>
-        <div id="exercises-box">
-          <div class="exercises-content part1 open">
-            <div class="exercises-heading">
-              <h2 class="header">Quản lí tuyển sinh</h2>
-              <div class="header-suggest">
-                <h3>Gợi ý:</h3>
-                <div class="summary">
-                  <h4 class="summary-title">Mở rộng để xem thêm</h4>
-                  <ul class="summary-list">
-                    <li>
-                      <p>
-                        Điểm chuẩn của hội đồng các bạn tự nhập thêm. Điểm chuẩn
-                        của 3 môn thường tối đa 30đ. Nên có thể lấy các điểm
-                        chuẩn như sau: 30,25,29
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        Ô nhập khu vực, đối tượng có thể tạo bằng input,
-                        dropdown hoặc radio.
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        Nếu có 1 trong 3 môn bị điểm 0 thì lặp tức cho rớt không
-                        cần kiểm tra tổng điểm có lớn hơn hoặc bằng điểm chuẩn
-                        hay không
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="exercises-sovle">
-              <form action="javascript:void(0);">
-                <div class="user-enter">
-                  <input
-                    type="number"
-                    id="benchmarks"
-                    placeholder="Điểm chuẩn"
-                    min="0"
-                    max="30"
-                  />
-                  <select id="area" name="area">
-                    <option value="0">Chọn khu vực</option>
-                    <option value="2">A</option>
-                    <option value="1">B</option>
-                    <option value="0.5">C</option>
-                  </select>
-                  <select id="object" name="object">
-                    <option value="0">Chọn đối tượng</option>
-                    <option value="2.5">1</option>
-                    <option value="1.5">2</option>
-                    <option value="1">3</option>
-                  </select>
-                  <input
-                    type="number"
-                    class="scores"
-                    placeholder="Điểm môn thứ 1"
-                    min="0"
-                    max="10"
-                    step="0.01"
-                  />
-                  <input
-                    type="number"
-                    class="scores"
-                    placeholder="Điểm môn thứ 2"
-                    min="0"
-                    max="10"
-                    step="0.01"
-                  />
-                  <input
-                    type="number"
-                    class="scores"
-                    placeholder="Điểm môn thứ 3"
-                    min="0"
-                    max="10"
-                  />
-                </div>
-                <div class="button-submit">
-                  <button type="submit" id="daihoc-button">Kết quả</button>
-                </div>
-                <div class="result-output">
-                  <span class="message"></span
-                  ><span class="result-inner"></span>
-                </div>
-              </form>
+        <div class="excersise-form">
+          <div class="meunu-exercises">
+            <div class="meunu-box">
+              <ul class="list-exercieses">
+                <li class="exercise active"><span>Bài 1</span></li>
+                <li class="exercise"><span>Bài 2</span></li>
+                <li class="exercise"><span>Bài 3</span></li>
+                <li class="exercise"><span>Bài 4</span></li>
+                <li class="exercise"><span>Bài 5</span></li>
+                <li class="exercise"><span>Bài 6</span></li>
+                <li class="exercise"><span>Bài 7</span></li>
+                <li class="exercise"><span>Bài 8</span></li>
+                <li class="exercise"><span>Bài 9</span></li>
+                <li class="exercise"><span>Bài 10</span></li>
+              </ul>
             </div>
           </div>
-          <div class="exercises-content part2">
-            <div class="exercises-heading">
-              <h2 class="header">Tính tiền Cáp</h2>
-              <div class="header-suggest">
-                <h3>Gợi ý:</h3>
-                <div class="summary">
-                  <h4 class="summary-title">Mở rộng để xem thêm</h4>
-                  <ul class="summary-list">
-                    <li>
-                      <p>
-                        Sử dụng event onchange của dropdown để xử lý ẩn hiện cho
-                        ô nhập số kết nối khi chọn loại khách hàng: Onchange
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        Đối với loại khách hàng Doanh Nghiệp, tổng 10 kết nối
-                        đầu là 75$ => đây là giá trọn gói, nếu doanh nghiệp lắp
-                        đặt số kết nối nhỏ hơn 10 thì vẫn phải đóng 75$. Vd: 6
-                        kết nối thì vẫn sẽ cộng 75$ vào tổng tiền. => Nếu lắp
-                        trên 10 kết nối thì kết nối thứ 11 trở đi sẽ tính 5$/kết
-                        nối.
-                      </p>
-                    </li>
-                  </ul>
+          <div id="exercises-box">
+            <div class="exercises-content part1 open">
+              <div class="exercises-heading">
+                <h2 class="header">Tổng số dương</h2>
+                <div class="header-suggest">
+                  <h3>Gợi ý:</h3>
+                  <div class="summary">
+                    <h4 class="summary-title">Mở rộng để xem thêm</h4>
+                    <ul class="summary-list">
+                      <li>
+                        <p>Tương tự demo trên Lớp</p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="exercises-sovle">
-              <form action="javascript:void(0);">
-                <div class="user-enter">
-                  <select id="type-user" name="area">
-                    <option value="0">Chọn loại khách hàng</option>
-                    <option value="1">Nhà dân</option>
-                    <option value="2">Doanh Nghiệp</option>
-                  </select>
-                  <input
-                    type=""
-                    id="user-id"
-                    placeholder="Nhập mã khách hàng"
-                  />
-                  <input
-                    type="number"
-                    class="channels"
-                    placeholder="Số kênh cao cấp"
-                    step="1"
-                  />
-                  <input
-                    type="number"
-                    class="connect"
-                    placeholder="Số kết nối"
-                    step="1"
-                  />
-                </div>
-                <div class="button-submit">
-                  <button type="submit" id="tiencap-button">
-                    Tính tiền cáp
-                  </button>
-                </div>
-                <div class="result-output">
-                  <span class="message"></span
-                  ><span class="result-inner" id="result-tiencap"></span>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="exercises-content part3">
-            <div class="exercises-heading">
-              <h2 class="header">Thuế thu nhập cá nhân</h2>
-              <div class="header-suggest">
-                <h3>Gợi ý:</h3>
-                <div class="summary">
-                  <h4 class="summary-title">Mở rộng để xem thêm</h4>
-                  <ul class="summary-list">
-                    <li>
-                      <p>
-                        Tổng thu nhập năm các bạn tự nhập thêm. Giả sử 1 tháng
-                        thu nhập 10tr thì 1 năm sẽ là 10 x 12 = 120tr => các bạn
-                        sẽ nhập 120000000
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        Demo hiện tại đang tính % thuế theo điều kiện mà thu
-                        nhập chịu thuế rơi vào. Vd: thu nhập chịu thuế là 110tr
-                        thì tính 10% của 110tr => 110tr * 0.1
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        Do đề bài không ghi rõ yêu cầu tính thuế nên cũng có thể
-                        tính theo cách chia ra từng đoạn thuế giống bài tính
-                        tiền grab. Vd: 110tr => 60tr *0.05 + (110tr-60tr) * 0.1
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        Sử dụng input có type number thì khi nhập 120000000, có
-                        thể nhập ngắn gọn thành 120e+6
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        Đối với các con số hàng triệu có nhiều số 0, có thể viết
-                        ngắn gọn trong code như sau: 4tr => 4000000 => 4e+6
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        Dùng NumberFormat để số tiền hiển thị đẹp hơn:
-                        NumberFormat
-                      </p>
-                    </li>
-                  </ul>
-                </div>
+              <div class="exercises-sovle">
+                <form action="javascript:void(0);">
+                  <div class="button-submit">
+                    <button
+                      type="submit"
+                      class="submit-button"
+                      id="posnumber-button"
+                    >
+                      Kết quả
+                    </button>
+                  </div>
+                  <div class="result-output">
+                    <span class="result result-posnumber"></span>
+                  </div>
+                </form>
               </div>
             </div>
-            <div class="exercises-sovle">
-              <form action="javascript:void(0);">
-                <div class="user-enter">
-                  <input type="" id="user-name" placeholder="Nhập họ tên" />
-                  <input
-                    type="number"
-                    class="income"
-                    placeholder="Tổng thu nhập năm"
-                    step="0.5e+6"
-                    min="0"
-                  />
-                  <input
-                    type="number"
-                    class="people"
-                    placeholder="Số người phụ thuộc"
-                    step="1"
-                    min="0"
-                  />
-                </div>
-                <div class="button-submit">
-                  <button type="submit" id="tienthue-button">
-                    Tính tiền thuế
-                  </button>
-                </div>
-                <div class="result-output">
-                  <span class="message"></span
-                  ><span class="result-inner" id="result-tienthue"></span>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="exercises-content part4">
-            <div class="exercises-heading">
-              <h2 class="header">Tính tiền điện</h2>
-              <div class="header-suggest">
-                <h3>Gợi ý:</h3>
-                <div class="summary">
-                  <h4 class="summary-title">Mở rộng để xem thêm</h4>
-                  <ul class="summary-list">
-                    <li>
-                      <p>
-                        Cách tính tiền điện gần giống với bài tính tiền Grab
-                        trên lớp
-                      </p>
-                    </li>
-                  </ul>
+            <div class="exercises-content part2">
+              <div class="exercises-heading">
+                <h2 class="header">Đếm số dương</h2>
+                <div class="header-suggest">
+                  <h3>Gợi ý:</h3>
+                  <div class="summary">
+                    <h4 class="summary-title">Mở rộng để xem thêm</h4>
+                    <ul class="summary-list">
+                      <li>
+                        <p>
+                          Sử dụng event onchange của dropdown để xử lý ẩn hiện
+                          cho ô nhập số kết nối khi chọn loại khách hàng:
+                          Onchange
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Đối với loại khách hàng Doanh Nghiệp, tổng 10 kết nối
+                          đầu là 75$ => đây là giá trọn gói, nếu doanh nghiệp
+                          lắp đặt số kết nối nhỏ hơn 10 thì vẫn phải đóng 75$.
+                          Vd: 6 kết nối thì vẫn sẽ cộng 75$ vào tổng tiền. =>
+                          Nếu lắp trên 10 kết nối thì kết nối thứ 11 trở đi sẽ
+                          tính 5$/kết nối.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
+              <div class="exercises-sovle">
+                <form action="javascript:void(0);">
+                  <div class="button-submit">
+                    <button
+                      type="submit"
+                      class="submit-button"
+                      id="count-posnumber-button"
+                    >
+                      Kết quả
+                    </button>
+                  </div>
+                  <div class="result-output">
+                    <span class="result count-posnumber"></span>
+                  </div>
+                </form>
+              </div>
             </div>
-            <div class="exercises-sovle">
-              <form action="javascript:void(0);">
-                <div class="user-enter">
-                  <input type="" id="user-name2" placeholder="Nhập họ tên" />
-                  <input
-                    type="number"
-                    class="electric-number"
-                    placeholder="Nhập số kW điện"
-                    step="1"
-                    min="0"
-                  />
+            <div class="exercises-content part3">
+              <div class="exercises-heading">
+                <h2 class="header">Tìm số nhỏ nhất</h2>
+                <div class="header-suggest">
+                  <h3>Gợi ý:</h3>
+                  <div class="summary">
+                    <h4 class="summary-title">Mở rộng để xem thêm</h4>
+                    <ul class="summary-list">
+                      <li>
+                        <p>
+                          Tổng thu nhập năm các bạn tự nhập thêm. Giả sử 1 tháng
+                          thu nhập 10tr thì 1 năm sẽ là 10 x 12 = 120tr => các
+                          bạn sẽ nhập 120000000
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="button-submit">
-                  <button type="submit" id="tiendien-button">
-                    Tính tiền thuế
-                  </button>
+              </div>
+              <div class="exercises-sovle">
+                <form action="javascript:void(0);">
+                  <div class="button-submit">
+                    <button
+                      type="submit"
+                      class="submit-button"
+                      id="minnumber-button"
+                    >
+                      Kết quả
+                    </button>
+                  </div>
+                  <div class="result-output">
+                    <span class="result minnumber"></span>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="exercises-content part4">
+              <div class="exercises-heading">
+                <h2 class="header">Tìm số dương nhỏ nhất</h2>
+                <div class="header-suggest">
+                  <h3>Gợi ý:</h3>
+                  <div class="summary">
+                    <h4 class="summary-title">Mở rộng để xem thêm</h4>
+                    <ul class="summary-list">
+                      <li>
+                        <p>
+                          Cách tính tiền điện gần giống với bài tính tiền Grab
+                          trên lớp
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="result-output">
-                  <span class="message"></span
-                  ><span class="result-inner" id="result-tiendien"></span>
+              </div>
+              <div class="exercises-sovle">
+                <form action="javascript:void(0);">
+                  <div class="button-submit">
+                    <button
+                      type="submit"
+                      class="submit-button"
+                      id="minpos-button"
+                    >
+                      Kết quả
+                    </button>
+                  </div>
+                  <div class="result-output">
+                    <span class="result minpos-number"></span>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="exercises-content part5">
+              <div class="exercises-heading">
+                <h2 class="header">Tìm số chẵn cuối cùng</h2>
+                <div class="header-suggest">
+                  <h3>Gợi ý:</h3>
+                  <div class="summary">
+                    <h4 class="summary-title">Mở rộng để xem thêm</h4>
+                    <ul class="summary-list">
+                      <li>
+                        <p>
+                          Cách tính tiền điện gần giống với bài tính tiền Grab
+                          trên lớp
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </form>
+              </div>
+              <div class="exercises-sovle">
+                <form action="javascript:void(0);">
+                  <div class="button-submit">
+                    <button
+                      type="submit"
+                      class="submit-button"
+                      id="final-button"
+                    >
+                      Kết quả
+                    </button>
+                  </div>
+                  <div class="result-output">
+                    <span class="result final-number"></span>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="exercises-content part6">
+              <div class="exercises-heading">
+                <h2 class="header">Đổi chỗ</h2>
+                <div class="header-suggest">
+                  <h3>Gợi ý:</h3>
+                  <div class="summary">
+                    <h4 class="summary-title">Mở rộng để xem thêm</h4>
+                    <ul class="summary-list">
+                      <li>
+                        <p>
+                          Cách tính tiền điện gần giống với bài tính tiền Grab
+                          trên lớp
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="exercises-sovle">
+                <form action="javascript:void(0);">
+                  <div class="user-enter">
+                    <input
+                      type="number"
+                      class="index-number1"
+                      placeholder="Nhập vị trí số 1"
+                      min="0"
+                      step="1"
+                    />
+                    <input
+                      type="number"
+                      class="index-number2"
+                      placeholder="Nhập vị trí số 2"
+                      step="1"
+                      min="0"
+                    />
+                  </div>
+                  <div class="button-submit">
+                    <button
+                      type="submit"
+                      class="submit-button"
+                      id="convert-button"
+                    >
+                      Kết quả
+                    </button>
+                  </div>
+                  <div class="result-output">
+                    <span class="result convert-number"></span>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="exercises-content part7">
+              <div class="exercises-heading">
+                <h2 class="header">Sắp xếp tăng dần</h2>
+                <div class="header-suggest">
+                  <h3>Gợi ý:</h3>
+                  <div class="summary">
+                    <h4 class="summary-title">Mở rộng để xem thêm</h4>
+                    <ul class="summary-list">
+                      <li>
+                        <p>
+                          Cách tính tiền điện gần giống với bài tính tiền Grab
+                          trên lớp
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="exercises-sovle">
+                <form action="javascript:void(0);">
+                  <div class="button-submit">
+                    <button
+                      type="submit"
+                      class="submit-button"
+                      id="sort-button"
+                    >
+                      Kết quả
+                    </button>
+                  </div>
+                  <div class="result-output">
+                    <span class="result sort-number"></span>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="exercises-content part8">
+              <div class="exercises-heading">
+                <h2 class="header">Tìm số nguyên tố đầu tiền</h2>
+                <div class="header-suggest">
+                  <h3>Gợi ý:</h3>
+                  <div class="summary">
+                    <h4 class="summary-title">Mở rộng để xem thêm</h4>
+                    <ul class="summary-list">
+                      <li>
+                        <p>
+                          Cách tính tiền điện gần giống với bài tính tiền Grab
+                          trên lớp
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="exercises-sovle">
+                <form action="javascript:void(0);">
+                  <div class="button-submit">
+                    <button
+                      type="submit"
+                      class="submit-button"
+                      id="prime-button"
+                    >
+                      Kết quả
+                    </button>
+                  </div>
+                  <div class="result-output">
+                    <span class="result prime-number"></span>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="exercises-content part9">
+              <div class="exercises-heading">
+                <h2 class="header">Đếm số nguyên</h2>
+                <div class="array-integer">
+                  <form class="array-input" action="#">
+                    <input
+                      type="number"
+                      id="input-array-integer"
+                      step="1"
+                      placeholder="Nhập số n"
+                    />
+                    <button class="array-integer-push">Thêm số</button>
+                    <div class="result-output array-result">
+                      <span id="array-integer-print"></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="header-suggest">
+                  <h3>Gợi ý:</h3>
+                  <div class="summary">
+                    <h4 class="summary-title">Mở rộng để xem thêm</h4>
+                    <ul class="summary-list">
+                      <li>
+                        <p>
+                          Cách tính tiền điện gần giống với bài tính tiền Grab
+                          trên lớp
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="exercises-sovle">
+                <form action="javascript:void(0);">
+                  <div class="button-submit">
+                    <button
+                      type="submit"
+                      class="submit-button"
+                      id="integer-button"
+                    >
+                      Kết quả
+                    </button>
+                  </div>
+                  <div class="result-output">
+                    <span class="result integer-number"></span>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="exercises-content part10">
+              <div class="exercises-heading">
+                <h2 class="header">So sánh số lượng số âm và số dương</h2>
+                <div class="header-suggest">
+                  <h3>Gợi ý:</h3>
+                  <div class="summary">
+                    <h4 class="summary-title">Mở rộng để xem thêm</h4>
+                    <ul class="summary-list">
+                      <li>
+                        <p>
+                          Cách tính tiền điện gần giống với bài tính tiền Grab
+                          trên lớp
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="exercises-sovle">
+                <form action="javascript:void(0);">
+                  <div class="button-submit">
+                    <button
+                      type="submit"
+                      class="submit-button"
+                      id="compare-button"
+                    >
+                      Kết quả
+                    </button>
+                  </div>
+                  <div class="result-output">
+                    <span class="result compare-number"></span>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>

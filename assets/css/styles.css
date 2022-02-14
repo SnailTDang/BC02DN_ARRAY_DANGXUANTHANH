@@ -5,9 +5,53 @@
 }
 
 .container {
-  display: flex;
   max-width: 50%;
   margin: 0 auto;
+  background-image: url(https://separateweb.com/niwax-demo/images/banner/niwax-lpbg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  position: relative;
+  box-shadow: 5px 5px 10px #ccc;
+}
+
+.array-input,
+#exercises-box,
+.meunu-exercises {
+  z-index: 1;
+}
+
+.array {
+  padding: 20px;
+}
+
+#input-array,
+#input-array-integer {
+  font-size: 15px;
+  min-width: 50%;
+  padding: 8px 16px;
+  line-height: 1.55555556;
+  border: none;
+  outline: none;
+  box-shadow: inset 5px 5px 5px 0.3px #e6e6e6;
+}
+
+.array-result {
+  margin: 10px 0;
+}
+
+.excersise-form {
+  display: flex;
+  background-color: #ffffffb3;
+}
+
+.excersise-form::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url(https://separateweb.com/niwax-demo/images/banner/niwax-lpbg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,20 +59,20 @@
   box-shadow: 5px 5px 10px #ccc;
 }
 
-.container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffffb3;
+.array-push,
+.array-delete,
+.array-integer-push,
+.number-delete {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #0d6efd;
+  border: none;
+  color: #fff;
 }
 
 .meunu-exercises {
   flex: 0 0 20%;
   width: 20%;
-  z-index: 1;
   box-shadow: 5px 5px 10px #ccc;
 }
 
@@ -57,10 +101,18 @@ li.active span {
 #exercises-box {
   flex: 0 0 80%;
   width: 80%;
-  z-index: 1;
 }
 
-.part1 {
+.part1,
+.part2,
+.part3,
+.part4,
+.part5,
+.part6,
+.part7,
+.part8,
+.part9,
+.part10 {
   display: none;
 }
 
@@ -130,7 +182,8 @@ li.active span {
   margin-bottom: 20px;
 }
 
-.button-submit button {
+.submit-button {
+  margin: 15px 0;
   padding: 10px 20px;
   border-radius: 20px;
   background-color: #0d6efd;
@@ -140,7 +193,7 @@ li.active span {
 
 .result-output {
   padding: 15px 20px;
-  height: 60px;
+  min-height: 60px;
   border-radius: 8px;
   background-color: #d1e7dd;
   border: 1px solid #66b994;
